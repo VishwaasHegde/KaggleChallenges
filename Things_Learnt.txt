@@ -1,0 +1,11 @@
+1. Remove outliers
+2. Can apply log(1+x) transformation on the y label
+3. Convert non-numeric features as str
+4. Fill the na as other category
+5. if nas are only present in test, then fill it with mode (for cat)
+6. Calculate the skewness for all numerical variables, and then apply boxcox1p for variables with skew>0.5 to bring their distributions to guassian
+7. ohe using pd.get_dummies
+8. If a feature has more than 99.x % of the values belonging to just 1 value, drop it
+9. Use robust scaler to normalize by avoiding outliers
+10. Use multiple regressors and then use StackingCVRegressor.
+11. Finally combine all models with their weights
